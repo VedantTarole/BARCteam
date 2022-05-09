@@ -1,213 +1,222 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Core Team</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <style>
-            @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+        @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
 
-                .page-wrapper {
-                font-family: 'Lato', sans-serif;
-                min-height: 30vh;
-                background-color: #F5F7FA;
-                margin: auto;
-                display: flex;
-                flex-wrap: wrap;
-                align-content: flex-start;
-                justify-content: space-evenly;
-                padding-left: calc(5% - 16px);
-                padding-right: calc(5% - 16px);
-                padding-top: 20px;
-                padding-bottom: 30px;
-                /* padding: 0 5%; */
-                }
+        .page-wrapper {
+            font-family: 'Lato', sans-serif;
+            min-height: 30vh;
+            background-color: #F5F7FA;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            justify-content: space-evenly;
+            padding-left: calc(5% - 16px);
+            padding-right: calc(5% - 16px);
+            padding-top: 20px;
+            padding-bottom: 30px;
+            /* padding: 0 5%; */
+        }
 
-                .profile-box {
+        .profile-box {
+            background: #FFFFFF;
+            box-shadow: 0 2px 6px 0 rgba(47, 83, 151, 0.10);
+            border-radius: 3px;
+            margin: 16px 16px;
+            padding: 16px 16px;
+            width: 200px;
+            max-width: 200px;
+            text-align: center;
+            transition: 300ms;
+            flex-grow: 1;
+            background-image: url('bg4.jpg');
+        }
+
+        .profile-box:hover {
+            /* box-shadow: 0 2px 6px 0 rgba(47,83,151,0.40); */
+            box-shadow: 0 0 20px 9px rgba(0, 0, 0, 0.03);
+        }
+
+        img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            box-shadow: 0 2px 6px 0 rgba(47, 83, 151, 0.10);
+        }
+
+        #logo {
+            width: 127px;
+            height: 100%;
+            border-radius: 0%;
+            background-color: white;
+            margin-right: 32px;
+            box-shadow: none;
+        }
+
+        ::placeholder {
+            color: #98A0A6;
+            font-family: 'Lato', sans-serif;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        h2 {
+            text-align: center;
+            padding: 40px;
+            background-image: url('bg2.jpg');
+            margin-bottom: 0;
+            font-weight: bold;
+        }
+
+        h3 {
+            font-weight: 300;
+            font-size: 18px;
+            margin-bottom: 0;
+            font-weight: 400;
+        }
+
+        h4 {
+            transition: 500ms;
+            font-weight: 300;
+            font-size: 16px;
+            font-weight: 400;
+            margin-top: 8px;
+            color: #fc5e5ec3;
+            cursor: pointer;
+        }
+
+        #assign,
+        #view {
+            width: 50%;
+            font-size: 14px;
+            color: #98A0A6;
+            font-weight: 300;
+            padding: 8px 0;
+            border-radius: 100px;
+            transition: 300ms;
+            cursor: pointer;
+        }
+
+        #assign:hover,
+        #view:hover {
+            background-color: #507BFC;
+            color: white;
+            box-shadow: 0 10px 20px 0 rgba(80, 123, 252, 0.50);
+        }
+
+        #assign {
+            float: left;
+        }
+
+        #view {
+            float: right;
+        }
+
+        i {
+            margin-right: 8px;
+        }
+
+        .navbar {
+            background-color: rgb(124, 247, 192);
+            overflow: hidden;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            text-align: center;
+            padding: 14px 16px;
+            float: left;
+            color: rgb(0, 0, 0);
+            margin-left: 3%;
+            margin-right: 3%;
+        }
+
+        .navbar a:hover {
+            background-color: rgb(255, 255, 255);
+        }
+
+
+        .content {
+
+            position: absolute;
+            min-width: 160px;
+            z-index: 1;
+            box-shadow: 0px 1px 1px 1px black;
+            margin-top: 50px;
+            display: none;
+
+        }
+
+        .content a {
+            display: block;
+            float: none;
+            background-color: black;
+            text-decoration: none;
+            text-align: left;
+            padding: 14px 16px;
+
+        }
+
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: skyblue;
+            color: rgb(249, 246, 246);
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+        #myBtn:hover {
+            background-color: #555;
+        }
+
+        @media screen and (max-width: 870px) {
+            .navbar a {
+                margin-left: 1%;
+                margin-right: 1%;
+            }
+        }
+
+        @media screen and (max-width: 870px) {
+            .navbar a {
+                margin-left: 3px;
+                margin-right: 3px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .profile-box {
                 background: #FFFFFF;
-                box-shadow: 0 2px 6px 0 rgba(47,83,151,0.10);
+                box-shadow: 0 2px 6px 0 rgba(47, 83, 151, 0.10);
                 border-radius: 3px;
-                margin: 16px 16px;
-                padding: 16px 16px;
-                width: 200px;
+                margin: 12px 12px;
+                padding: 12px 12px;
+                width: 100px;
                 max-width: 200px;
                 text-align: center;
                 transition: 300ms;
                 flex-grow: 1;
                 background-image: url('bg4.jpg');
-                }
-
-                .profile-box:hover {
-                /* box-shadow: 0 2px 6px 0 rgba(47,83,151,0.40); */
-                box-shadow: 0 0 20px 9px rgba(0,0,0,0.03);
-                }
-
-                img {
-                width: 80px;
-                height: 80px;
-                border-radius: 50%;
-                box-shadow: 0 2px 6px 0 rgba(47,83,151,0.10);
-                }
-
-                #logo {
-                width: 127px;
-                height: 100%;
-                border-radius: 0%;
-                background-color: white;
-                margin-right: 32px;
-                box-shadow: none;
-                }
-
-                ::placeholder {
-                color: #98A0A6;
-                font-family: 'Lato', sans-serif;
-                font-style: italic;
-                font-weight: 300;
-                }
-                h2{
-                    text-align: center;
-                    padding: 40px;
-                    background-image: url('bg2.jpg');
-                    margin-bottom: 0;
-                    font-weight: bold;
-                }
-                h3 {
-                font-weight: 300;
-                font-size: 18px;
-                margin-bottom: 0;
-                font-weight: 400;
-                }
-
-                h4 {
-                transition: 500ms;
-                font-weight: 300;
-                font-size: 16px;
-                font-weight: 400;
-                margin-top: 8px;
-                color: #fc5e5ec3;
-                cursor: pointer;
-                }
-
-                #assign,
-                #view {
-                width: 50%;
-                font-size: 14px;
-                color: #98A0A6;
-                font-weight: 300;
-                padding: 8px 0;
-                border-radius: 100px;
-                transition: 300ms;
-                cursor: pointer;
-                }
-
-                #assign:hover,
-                #view:hover {
-                background-color: #507BFC;
-                color: white;
-                box-shadow: 0 10px 20px 0 rgba(80,123,252,0.50);
-                }
-
-                #assign {
-                float: left;
-                }
-
-                #view {
-                float: right;
-                }
-
-                i {
-                margin-right: 8px;
-                }
-                .navbar{
-                    background-color:rgb(124, 247, 192);
-                    overflow:hidden;
-                }
-                .navbar a{
-                        text-decoration:none;
-                        text-align: center;
-                        padding: 14px 16px;
-                        float: left;
-                        color: rgb(0, 0, 0);
-                        margin-left: 3%;
-                        margin-right: 3%;
-                }
-                .navbar a:hover
-                    {
-                        background-color:rgb(255, 255, 255);
-                    }
-
-                    
-                    .content
-                    {
-                        
-                        position:absolute;
-                        min-width:160px;
-                        z-index:1;
-                        box-shadow: 0px 1px 1px 1px black;
-                        margin-top:50px;
-                        display:none;
-                        
-                    }
-                    .content a{
-                        display:block;
-                        float:none;
-                        background-color:black;
-                        text-decoration:none;
-                        text-align:left;
-                        padding:14px 16px;
-                        
-                    }
-
-                #myBtn {
-                    display: none;
-                    position: fixed;
-                    bottom: 20px;
-                    right: 30px;
-                    z-index: 99;
-                    font-size: 18px;
-                    border: none;
-                    outline: none;
-                    background-color: skyblue;
-                    color: rgb(249, 246, 246);
-                    cursor: pointer;
-                    padding: 15px;
-                    border-radius: 4px;
-                    }
-
-                #myBtn:hover {
-                    background-color: #555;
-                }
-                @media screen and (max-width: 870px){
-                    .navbar a{
-                        margin-left: 1%;
-                        margin-right: 1%;
-                    }
-                }
-                @media screen and (max-width: 870px){
-                    .navbar a{
-                        margin-left: 3px;
-                        margin-right: 3px;
-                    }
-                }
-                @media screen and (max-width: 480px) {
-                    .profile-box {
-                        background: #FFFFFF;
-                        box-shadow: 0 2px 6px 0 rgba(47,83,151,0.10);
-                        border-radius: 3px;
-                        margin: 12px 12px;
-                        padding: 12px 12px;
-                        width: 100px;
-                        max-width: 200px;
-                        text-align: center;
-                        transition: 300ms;
-                        flex-grow: 1;
-                        background-image: url('bg4.jpg');
-                    }
-                }
-
+            }
+        }
     </style>
 </head>
+
 <body>
     <!--<nav>
         <img id="logo" src="https://jarllyng.github.io/Team-page/assets/awesomeCorpLogo.svg" alt="site logo">
@@ -217,399 +226,483 @@
     <div class="navbar">
         <a href="#DT">Design Team</a>
         <a href="#AC">Associate Members and Content Team </a>
+        <a href="#WB">Web Team </a>
         <a href="#PVT">Photography and Videography Team</a>
-        </div>
-      <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-      <h2 id="DT">Design Team</h2>
-        <div class="page-wrapper" >
-            <div class="profile-box">
-              <h3>Abhishek Tiwari</h3>
-              <h4>21HS10004</h4>
-              <div class="btn-container">
-              </div>
-            </div>
-            <div class="profile-box">
-              <h3>Hritwik Raj</h3>
-              <h4>21MI10025</h4>
-              <div class="btn-container">
-              </div>
-            </div>
-            <div class="profile-box">
-              <h3>Ajay Biswas</h3>
-              <h4>21ME30006</h4>
-              <div class="btn-container">
-              </div>
-            </div>
-            <div class="profile-box">
-              <h3>Ayush Sunil Munot </h3>
-              <h4>21MT30017 </h4>
-              <div class="btn-container">
-              </div>
-            </div>
-            <div class="profile-box">
-              <h3>Harsh Sharma</h3>
-              <h4>21GG10016</h4>
-              <div class="btn-container">
-              </div>
-            </div>
-            <div class="profile-box">
-              <h3>Akash Burnwal</h3>
-              <h4>21NA10004</h4>
-              <div class="btn-container">
-              </div>
-            </div>
-            <div class="profile-box">
-              <h3>Ishan Jindal</h3>
-              <h4>21CY10018</h4>
-              <div class="btn-container">
-              </div>
-            </div>
-            <div class="profile-box">
-              <h3>Shivshankar verma</h3>
-              <h4>21GG10036</h4>
-              <div class="btn-container">
-              </div>
-            </div>
-            <div class="profile-box">
-              <h3>Bhuneshwar Netam </h3>
-              <h4>21MI31026</h4>
-              <div class="btn-container">
-              </div>
-            </div>
-            <div class="profile-box">
-              <h3>Kartik Naik</h3>
-              <h4>21NA30012</h4>
-              <div class="btn-container">
-              </div>
-            </div>
-            <div class="profile-box">
-              <h3>Vishal Arya</h3>
-              <h4>21ME10096</h4>
-              <div class="btn-container">
-              </div>
-            </div>
-            <div class="profile-box">
-              <h3>Vivek Pandey</h3>
-              <h4>21NA10042</h4>
-              <div class="btn-container">
-              </div>
-            </div>
-          </div>
-      <h2 id="AC">Associate Members and Content Team</h2>
-        <div class="page-wrapper" >
-                <div class="profile-box">
-                    <h3>Arpit Singh</h3>
-                    <h4>21AG10006</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Bhumi Tayal</h3>
-                    <h4>21ME10021</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Archie Avirati</h3>
-                    <h4>21IM30004</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Aadit Shah</h3>
-                    <h4>21MI31001</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Suryansh Patsaria</h3>
-                    <h4>21IM30024</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Takshil Shah</h3>
-                    <h4>21MT30027</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Om Gawande</h3>
-                    <h4>21MF10018</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Bhoumik Mhatre</h3>
-                    <h4>21MI33008</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Bijoy Timung</h3>
-                    <h4>21PH20001</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Pahnabi Roy</h3>
-                    <h4>21IM10018</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Himanshu Singhai</h3>
-                    <h4>21EX10016</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Ambuj Sharma</h3>
-                    <h4>21ME30012</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Ishan Jindal</h3>
-                    <h4>21CY10018</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Anirudh Gupta</h3>
-                    <h4>21CH30004</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Thummala Harika</h3>
-                    <h4>21EC10081</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Ayush Sunil Munot</h3>
-                    <h4>21MT30017</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Dommeti Chaitanya Srinivas</h3>
-                    <h4>21EC10021</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Shivshankar verma</h3>
-                    <h4>21GG10036</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Komal Arya</h3>
-                    <h4>21MI31014</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Navpreet Singh Ghai</h3>
-                    <h4>21MT30019</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Ashish Patwa</h3>
-                    <h4>21MF10009</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Mayank Sony</h3>
-                    <h4>21EX10020</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Siddharth Gupta </h3>
-                    <h4>21CY10037</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Soumili Mukherjee</h3>
-                    <h4>21MT10054</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Krishna Kolte</h3>
-                    <h4>21EE10040</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Sanket Kumar</h3>
-                    <h4>21MI33019</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Aayush Parashar</h3>
-                    <h4>21HS10002</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Aadityavikram Biyani</h3>
-                    <h4>21AG30003</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Divyanshu Singh</h3>
-                    <h4>21MI31012</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Vishal Saraswat</h3>
-                    <h4>21EC10087</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Aditya Sharma</h3>
-                    <h4>21CE10007</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Akshat Sharma</h3>
-                    <h4>21HS10009</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Abhishek Tiwari</h3>
-                    <h4>21HS10004</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Aishwary Patel</h3>
-                    <h4>21IM30003</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Bishanka Seal</h3>
-                    <h4>21IE10010</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Pratham Gupta</h3>
-                    <h4>21AG10026</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Arup Mahatha</h3>
-                    <h4>21NA10012</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Ayush Raj</h3>
-                    <h4>21MI33006</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Aryan Tayal</h3>
-                    <h4>21GG10007</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Ajay Biswas</h3>
-                    <h4>21ME30006</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Bharat kabra</h3>
-                    <h4>21CH10015</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Shobhit Rajpoot</h3>
-                    <h4>21CE30029</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Sohan Dash</h3>
-                    <h4>21CH10067</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-                <div class="profile-box">
-                    <h3>Bhoumik Mhatre</h3>
-                    <h4>21MI33008</h4>
-                    <div class="btn-container">
-                    </div>
-                </div>
-            </div>
-        <h2 id="PVT"> Photography and Videography Team</h2>  
-        <div class="page-wrapper" >
-            <div class="profile-box">
-                <h3>Tushar Kumar</h3>
-                <h4>21CH30035</h4>
-                <div class="btn-container">
-                </div>
-              </div>
-              <div class="profile-box">
-                <h3>Sathwik Padigela</h3>
-                <h4>21IM10017</h4>
-                <div class="btn-container">
-                </div>
-              </div>
-              <div class="profile-box">
-                <h3>Adarsh Tiwari</h3>
-                <h4>21EX10003</h4>
-                <div class="btn-container">
-                </div>
-              </div>
-              <div class="profile-box">
-                <h3>Kartik Naik</h3>
-                <h4>21NA30012</h4>
-                <div class="btn-container">
-                </div>
-              </div>
-        </div>
-        <script>
-            //Get the button
-            var mybutton = document.getElementById("myBtn");
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-            // When the user scrolls down 20px from the top of the document, show the button
-            window.onscroll = function() {scrollFunction()};
+    <h2 id="DT">Design Team</h2>
+    <div class="page-wrapper">
+        <div class="profile-box">
+            <h3>Abhishek Tiwari</h3>
+            <h4>21HS10004</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Hritwik Raj</h3>
+            <h4>21MI10025</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Ajay Biswas</h3>
+            <h4>21ME30006</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Ayush Sunil Munot </h3>
+            <h4>21MT30017 </h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Harsh Sharma</h3>
+            <h4>21GG10016</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Akash Burnwal</h3>
+            <h4>21NA10004</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Ishan Jindal</h3>
+            <h4>21CY10018</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Shivshankar verma</h3>
+            <h4>21GG10036</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Bhuneshwar Netam </h3>
+            <h4>21MI31026</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Kartik Naik</h3>
+            <h4>21NA30012</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Vishal Arya</h3>
+            <h4>21ME10096</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Vivek Pandey</h3>
+            <h4>21NA10042</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+    </div>
 
-            function scrollFunction() {
+    <h2 id="AC">Associate Members and Content Team</h2>
+    <div class="page-wrapper">
+        <div class="profile-box">
+            <h3>Arpit Singh</h3>
+            <h4>21AG10006</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Bhumi Tayal</h3>
+            <h4>21ME10021</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Archie Avirati</h3>
+            <h4>21IM30004</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Aadit Shah</h3>
+            <h4>21MI31001</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Suryansh Patsaria</h3>
+            <h4>21IM30024</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Takshil Shah</h3>
+            <h4>21MT30027</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Om Gawande</h3>
+            <h4>21MF10018</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Bhoumik Mhatre</h3>
+            <h4>21MI33008</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Bijoy Timung</h3>
+            <h4>21PH20001</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Pahnabi Roy</h3>
+            <h4>21IM10018</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Himanshu Singhai</h3>
+            <h4>21EX10016</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Ambuj Sharma</h3>
+            <h4>21ME30012</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Ishan Jindal</h3>
+            <h4>21CY10018</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Anirudh Gupta</h3>
+            <h4>21CH30004</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Thummala Harika</h3>
+            <h4>21EC10081</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Ayush Sunil Munot</h3>
+            <h4>21MT30017</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Dommeti Chaitanya Srinivas</h3>
+            <h4>21EC10021</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Shivshankar verma</h3>
+            <h4>21GG10036</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Komal Arya</h3>
+            <h4>21MI31014</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Navpreet Singh Ghai</h3>
+            <h4>21MT30019</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Ashish Patwa</h3>
+            <h4>21MF10009</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Mayank Sony</h3>
+            <h4>21EX10020</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Siddharth Gupta </h3>
+            <h4>21CY10037</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Soumili Mukherjee</h3>
+            <h4>21MT10054</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Krishna Kolte</h3>
+            <h4>21EE10040</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Sanket Kumar</h3>
+            <h4>21MI33019</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Aayush Parashar</h3>
+            <h4>21HS10002</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Aadityavikram Biyani</h3>
+            <h4>21AG30003</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Divyanshu Singh</h3>
+            <h4>21MI31012</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Vishal Saraswat</h3>
+            <h4>21EC10087</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Aditya Sharma</h3>
+            <h4>21CE10007</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Akshat Sharma</h3>
+            <h4>21HS10009</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Abhishek Tiwari</h3>
+            <h4>21HS10004</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Aishwary Patel</h3>
+            <h4>21IM30003</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Bishanka Seal</h3>
+            <h4>21IE10010</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Pratham Gupta</h3>
+            <h4>21AG10026</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Arup Mahatha</h3>
+            <h4>21NA10012</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Ayush Raj</h3>
+            <h4>21MI33006</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Aryan Tayal</h3>
+            <h4>21GG10007</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Ajay Biswas</h3>
+            <h4>21ME30006</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Bharat kabra</h3>
+            <h4>21CH10015</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Shobhit Rajpoot</h3>
+            <h4>21CE30029</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Sohan Dash</h3>
+            <h4>21CH10067</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Bhoumik Mhatre</h3>
+            <h4>21MI33008</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+    </div>
+
+    <h2 id="WB"> Web Team</h2>
+    <div class="page-wrapper">
+        <div class="profile-box">
+            <h3>Abhirup Pal</h3>
+            <h4>21CE10002</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Abhishek Tiwari</h3>
+            <h4>21HS10004</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Ajay Biswas</h3>
+            <h4>21ME30006</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Dikshant Sharma</h3>
+            <h4>21MT30009</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Jay Godara</h3>
+            <h4>21BT10017</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Krish Agarwal</h3>
+            <h4>21NA10018</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Puspendra Kumar</h3>
+            <h4>21CH10046</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Saksham Gupta </h3>
+            <h4>21MA10051</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>SHASWATA KANGSA BANIK</h3>
+            <h4>21AG10036</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Shaunak Ghosh</h3>
+            <h4>21ME10076</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Subrata Biswas</h3>
+            <h4>21EC10075</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Vasu Verma</h3>
+            <h4>21GG10043</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        
+        
+    </div>
+
+    <h2 id="PVT"> Photography and Videography Team</h2>
+    <div class="page-wrapper">
+        <div class="profile-box">
+            <h3>Tushar Kumar</h3>
+            <h4>21CH30035</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Sathwik Padigela</h3>
+            <h4>21IM10017</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Adarsh Tiwari</h3>
+            <h4>21EX10003</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+        <div class="profile-box">
+            <h3>Kartik Naik</h3>
+            <h4>21NA30012</h4>
+            <div class="btn-container">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 mybutton.style.display = "block";
             } else {
                 mybutton.style.display = "none";
             }
-            }
+        }
 
-            // When the user clicks on the button, scroll to the top of the document
-            function topFunction() {
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
-            }
-        </script>
-        
+        }
+    </script>
+
 </body>
+
 </html>
